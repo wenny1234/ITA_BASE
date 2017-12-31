@@ -1,0 +1,27 @@
+{
+  "CacheSourceKey": "1grck84",
+  "CachePdfKey": "1grck84/1grck84-1kj2rxa.pdf",
+  "CacheXpzKey": "1grck84/1grck84-1bd15jp.xpz",
+  "CacheInfoKey": "1grck84/1grck84-1bd15jp.json",
+  "CacheCopyKey": null,
+  "Document": "~/App_Data/ExampleFiles/Default.doc",
+  "DocumentHandlerType": null,
+  "DocumentFileName": "Default.doc",
+  "InputOptions": {
+    "$type": "GleamTech.DocumentUltimate.WordProcessingInputOptions, GleamTech.DocumentUltimate",
+    "FieldFileName": null,
+    "Format": "Doc",
+    "Password": null
+  },
+  "PdfOutputOptions": {
+    "Watermarks": [],
+    "FastWebViewEnabled": false,
+    "Password": null,
+    "Format": "Pdf"
+  },
+  "XpzOutputOptions": {
+    "Password": "1grck84",
+    "HighQualityEnabled": false,
+    "Format": "Xpz"
+  }
+}

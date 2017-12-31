@@ -1,0 +1,497 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Header,0:HeaderFooterSprite,0:Header.NonMtps;/Areas/Centers/Themes/StandardDevCenter/Content:0&amp;amp;v=185AB2A7FFC28B456E0C516753D2A163" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:Footer,0:HeaderFooterSprite,0:Footer.NonMtps,1:NewFooterSock,1:LinkList;/Areas/Centers/Themes/StandardDevCenter/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=4EE70F41524C30AB288DA1D97433D514" xmlns="http://www.w3.org/1999/xhtml" />
+<link type="text/css" rel="stylesheet" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>ASP.NET Document Viewer</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>ASP.NET Document Viewer</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            ASP.NET
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            asp.net document viewer
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Web
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">9/8/2017</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">MIT</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/ASPNET-Document-Viewer-6d83ecc3">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<h1>DocumentUltimate: ASP.NET Document Viewer</h1>
+<p>DocumentUltimate is an ASP.NET Document Viewer and Converter which supports both ASP.NET MVC and ASP.NET WebForms web applications/web sites. DocumentUltimate can also be used with .NET desktop applications for conversion between several document formats.</p>
+<ul>
+<li>View almost any document type (70&#43; file formats, including PDF &amp; Microsoft Office).
+</li><li>HTML5 Zero-footprint viewer. </li><li>Convert between document types. </li></ul>
+<p><img id="153277" src="https://i1.code.msdn.s-msft.com/aspnet-document-viewer-6d83ecc3/image/file/153277/1/documentultimate-screenshot.png" alt="" width="736" height="546"></p>
+<p><strong>Note:</strong> This project&nbsp;contains a fully working version of the product, however without a license key it will run in trial mode. For more information, please see&nbsp;<a href="http://www.gleamtech.com/documentultimate">DocumentUltimate:
+ ASP.NET Document Viewer</a>&nbsp;product page.</p>
+<h3>To use DocumentUltimate in an ASP.NET MVC Project, do the following in Visual Studio:</h3>
+<div>
+<ol>
+<li>
+<p>Add references to DocumentUltimate assemblies. There are two ways to perform this:</p>
+<ul>
+<li>
+<p>Add reference to <strong>GleamTech.Core.dll</strong> and <strong>GleamTech.DocumentUltimate.dll</strong> found in &quot;Bin&quot; folder of DocumentUltimate-vX.X.X.X.zip package which you already downloaded and extracted.</p>
+</li><li>
+<p>Or install NuGet package and add references automatically via NuGet Package Manager in Visual Studio: Go to<strong>
+<span class="ui">Tools -&gt; NuGet Package Manager -&gt; Package Manager Console</span></strong> and run this command:</p>
+<pre><span class="command">Install-Package DocumentUltimate -Source https://get.gleamtech.com/nuget/default/ </span></pre>
+<p>If you prefer using the user interface when working with NuGet, you can also install the package this way:</p>
+<ol>
+<li>
+<p>GleamTech has its own NuGet feed so first you need to add this feed to be able to find GleamTech's packages. Go to
+<strong><span class="ui">Tools -&gt; NuGet Package Manager -&gt; Package Manager Settings</span></strong> and then click the
+<strong><span class="ui">&#43;</span></strong> button to add a new package source. Enter
+<em><span class="command">GleamTech</span></em> in <strong><span class="ui">Name</span></strong> field and
+<em><span class="command">https://get.gleamtech.com/nuget/default/</span></em> in
+<span class="ui">Source</span> field and click <strong>OK</strong>.</p>
+</li><li>
+<p>Go to <strong><span class="ui">Tools -&gt; NuGet Package Manager -&gt; Manage NuGet Packages for Solution</span></strong>, select
+<em><span class="command">GleamTech</span></em> or <em><span class="command">All</span></em> in the
+<span class="ui">Package source</span> dropdown on the top right. Now enter <em>
+DocumentUltimate</em> in the search field, and click <strong><span class="ui">Install</span></strong> button on the found package.</p>
+</li></ol>
+</li></ul>
+</li><li>
+<p>Set DocumentUltimate's global configuration. For example, you may want to set the license key and the cache path. Insert some of the following lines (if overriding a default value is required) into the Application_Start method of your
+<strong>Global.asax.cs</strong>:</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">//Set this property only if you have a valid license key, otherwise do not 
+//set it so DocumentUltimate runs in trial mode. 
+DocumentUltimateConfiguration.Current.LicenseKey = &quot;QQJDJLJP34...&quot;; 
+ 
+//The default CachePath value is &quot;~/App_Data/DocumentCache&quot; 
+//Both virtual and physical paths are allowed. 
+DocumentUltimateWebConfiguration.Current.CachePath = &quot;~/App_Data/DocumentCache&quot;;</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__com">//Set&nbsp;this&nbsp;property&nbsp;only&nbsp;if&nbsp;you&nbsp;have&nbsp;a&nbsp;valid&nbsp;license&nbsp;key,&nbsp;otherwise&nbsp;do&nbsp;not&nbsp;</span>&nbsp;
+<span class="cs__com">//set&nbsp;it&nbsp;so&nbsp;DocumentUltimate&nbsp;runs&nbsp;in&nbsp;trial&nbsp;mode.&nbsp;</span>&nbsp;
+DocumentUltimateConfiguration.Current.LicenseKey&nbsp;=&nbsp;<span class="cs__string">&quot;QQJDJLJP34...&quot;</span>;&nbsp;&nbsp;
+&nbsp;&nbsp;
+<span class="cs__com">//The&nbsp;default&nbsp;CachePath&nbsp;value&nbsp;is&nbsp;&quot;~/App_Data/DocumentCache&quot;&nbsp;</span>&nbsp;
+<span class="cs__com">//Both&nbsp;virtual&nbsp;and&nbsp;physical&nbsp;paths&nbsp;are&nbsp;allowed.&nbsp;</span>&nbsp;
+DocumentUltimateWebConfiguration.Current.CachePath&nbsp;=&nbsp;<span class="cs__string">&quot;~/App_Data/DocumentCache&quot;</span>;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;Alternatively you can specify the configuration in &lt;appSettings&gt; tag of your Web.config.&nbsp;<br>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xml</span>
+<pre class="hidden">&lt;appSettings&gt; 
+  &lt;add key=&quot;DocumentUltimate:LicenseKey&quot; value=&quot;QQJDJLJP34...&quot; /&gt; 
+  &lt;add key=&quot;DocumentUltimateWeb:CachePath&quot; value=&quot;~/App_Data/DocumentCache&quot; /&gt; 
+&lt;/appSettings&gt;</pre>
+<div class="preview">
+<pre class="xml"><span class="xml__tag_start">&lt;appSettings</span><span class="xml__tag_start">&gt;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;<span class="xml__tag_start">&lt;add</span>&nbsp;<span class="xml__attr_name">key</span>=<span class="xml__attr_value">&quot;DocumentUltimate:LicenseKey&quot;</span>&nbsp;<span class="xml__attr_name">value</span>=<span class="xml__attr_value">&quot;QQJDJLJP34...&quot;</span>&nbsp;<span class="xml__tag_start">/&gt;</span>&nbsp;&nbsp;
+&nbsp;&nbsp;<span class="xml__tag_start">&lt;add</span>&nbsp;<span class="xml__attr_name">key</span>=<span class="xml__attr_value">&quot;DocumentUltimateWeb:CachePath&quot;</span>&nbsp;<span class="xml__attr_name">value</span>=<span class="xml__attr_value">&quot;~/App_Data/DocumentCache&quot;</span>&nbsp;<span class="xml__tag_start">/&gt;</span>&nbsp;&nbsp;
+<span class="xml__tag_end">&lt;/appSettings&gt;</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">As you would notice, DocumentUltimate: prefix maps to DocumentUltimateConfiguration.Current and DocumentUltimateWeb: prefix maps to DocumentUltimateWebConfiguration.Current.</div>
+</div>
+</li><li>
+<p>Open one of your View pages (eg. Index.cshtml) and at the top of your page add the necessary namespaces:</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">@using GleamTech.Web.Mvc 
+@using GleamTech.DocumentUltimate.Web</pre>
+<div class="preview">
+<pre class="csharp">@<span class="cs__keyword">using</span>&nbsp;GleamTech.Web.Mvc&nbsp;&nbsp;
+@<span class="cs__keyword">using</span>&nbsp;GleamTech.DocumentUltimate.Web</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">Alternatively you can add the namespaces globally in
+<strong>Views/web.config</strong> to avoid adding namespaces in your pages every time:<br>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xml</span>
+<pre class="hidden">&lt;system.web.webPages.razor&gt; 
+  &lt;pages pageBaseType=&quot;System.Web.Mvc.WebViewPage&quot;&gt; 
+    &lt;namespaces&gt; 
+      . 
+      . 
+      . 
+      &lt;add namespace=&quot;GleamTech.Web.Mvc&quot; /&gt; 
+      &lt;add namespace=&quot;GleamTech.DocumentUltimate.Web&quot; /&gt; 
+    &lt;/namespaces&gt; 
+  &lt;/pages&gt; 
+&lt;/system.web.webPages.razor&gt;</pre>
+<div class="preview">
+<pre class="xml"><span class="xml__tag_start">&lt;system</span>.web.webPages.razor<span class="xml__tag_start">&gt;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;<span class="xml__tag_start">&lt;pages</span>&nbsp;<span class="xml__attr_name">pageBaseType</span>=<span class="xml__attr_value">&quot;System.Web.Mvc.WebViewPage&quot;</span><span class="xml__tag_start">&gt;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_start">&lt;namespaces</span><span class="xml__tag_start">&gt;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_start">&lt;add</span>&nbsp;<span class="xml__attr_name">namespace</span>=<span class="xml__attr_value">&quot;GleamTech.Web.Mvc&quot;</span>&nbsp;<span class="xml__tag_start">/&gt;</span>&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_start">&lt;add</span>&nbsp;<span class="xml__attr_name">namespace</span>=<span class="xml__attr_value">&quot;GleamTech.DocumentUltimate.Web&quot;</span>&nbsp;<span class="xml__tag_start">/&gt;</span>&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_end">&lt;/namespaces&gt;</span>&nbsp;&nbsp;
+&nbsp;&nbsp;<span class="xml__tag_end">&lt;/pages&gt;</span>&nbsp;&nbsp;
+&lt;/system.web.webPages.razor&gt;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">&nbsp;Now in your page insert these lines:<br>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>HTML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">html</span>
+<pre class="hidden">@{ 
+    var documentViewer = new DocumentViewer  
+    { 
+        Width = 800, 
+        Height = 600, 
+        Document = &quot;~/Documents/Document.docx&quot; 
+    }; 
+}               
+&lt;html&gt;  
+  &lt;head&gt;  
+    @Html.RenderCss(documentViewer)  
+    @Html.RenderJs(documentViewer) 
+  &lt;/head&gt;  
+  &lt;body&gt;  
+    @Html.RenderControl(documentViewer)  
+  &lt;/body&gt;  
+&lt;/html&gt;</pre>
+<div class="preview">
+<pre class="html">@{&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;documentViewer&nbsp;=&nbsp;new&nbsp;DocumentViewer&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;{&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Width&nbsp;=&nbsp;800,&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Height&nbsp;=&nbsp;600,&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Document&nbsp;=&nbsp;&quot;~/Documents/Document.docx&quot;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;};&nbsp;&nbsp;
+}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span class="html__tag_start">&lt;html</span><span class="html__tag_start">&gt;&nbsp;</span>&nbsp;&nbsp;
+&nbsp;&nbsp;<span class="html__tag_start">&lt;head</span><span class="html__tag_start">&gt;&nbsp;</span>&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;@Html.RenderCss(documentViewer)&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;@Html.RenderJs(documentViewer)&nbsp;&nbsp;
+&nbsp;&nbsp;<span class="html__tag_end">&lt;/head&gt;</span>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;<span class="html__tag_start">&lt;body</span><span class="html__tag_start">&gt;&nbsp;</span>&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;@Html.RenderControl(documentViewer)&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;<span class="html__tag_end">&lt;/body&gt;</span>&nbsp;&nbsp;&nbsp;
+<span class="html__tag_end">&lt;/html&gt;</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">This will render a DocumentViewer control in the page which loads and displays the source document ~/Documents/Document.docx. Upon first view, internally DocumentViewer will convert the source document to PDF (used for &quot;Download
+ as Pdf&quot; and also for next conversion step) and then to XPZ (a special web-friendly format which DocumentViewer uses to actually render documents in the browser). So in this case the user will see &quot;please wait awhile...&quot; message in the viewer for a few seconds.
+ These generated PDF and XPZ files will be cached and upon consecutive page views, the document will be served directly from the cache so the user will see the document instantly on second viewing. When you modify the source document, the cached files are invalidated
+ so your original document and the corresponding cached files are always synced automatically. Note that it's also possible to pre-cache documents via DocumentCache.PreCacheDocument method (e.g. when your user uploads a document), see General Samples for more
+ information.</div>
+</div>
+</div>
+</li></ol>
+</div>
+<h3>To use DocumentUltimate in an ASP.NET WebForms Project, do the following in Visual Studio:</h3>
+<div>
+<ol>
+<li>
+<p>Add references to DocumentUltimate assemblies. There are two ways to perform this:</p>
+<ul>
+<li>
+<p>Add reference to <strong>GleamTech.Core.dll</strong> and <strong>GleamTech.DocumentUltimate.dll</strong> found in &quot;Bin&quot; folder of DocumentUltimate-vX.X.X.X.zip package which you already downloaded and extracted.</p>
+</li><li>
+<p>Or install NuGet package and add references automatically via NuGet Package Manager in Visual Studio: Go to<strong>
+<span class="ui">Tools -&gt; NuGet Package Manager -&gt; Package Manager Console</span></strong> and run this command:</p>
+<pre><span class="command">Install-Package DocumentUltimate -Source https://get.gleamtech.com/nuget/default/ </span></pre>
+<p>If you prefer using the user interface when working with NuGet, you can also install the package this way:</p>
+<ol>
+<li>
+<p>GleamTech has its own NuGet feed so first you need to add this feed to be able to find GleamTech's packages. Go to
+<strong><span class="ui">Tools -&gt; NuGet Package Manager -&gt; Package Manager Settings</span></strong> and then click the
+<strong><span class="ui">&#43;</span></strong> button to add a new package source. Enter
+<em><span class="command">GleamTech</span></em> in <strong><span class="ui">Name</span></strong> field and
+<em><span class="command">https://get.gleamtech.com/nuget/default/</span></em> in
+<span class="ui">Source</span> field and click <strong>OK</strong>.</p>
+</li><li>
+<p>Go to <strong><span class="ui">Tools -&gt; NuGet Package Manager -&gt; Manage NuGet Packages for Solution</span></strong>, select
+<em><span class="command">GleamTech</span></em> or <em><span class="command">All</span></em> in the
+<span class="ui">Package source</span> dropdown on the top right. Now enter <em>
+DocumentUltimate</em> in the search field, and click <strong><span class="ui">Install</span></strong> button on the found package.</p>
+</li></ol>
+</li></ul>
+</li><li>
+<p>Set DocumentUltimate's global configuration. For example, you may want to set the license key and the cache path. Insert some of the following lines (if overriding a default value is required) into the Application_Start method of your
+<strong>Global.asax.cs</strong>:</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>C#</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">csharp</span>
+<pre class="hidden">//Set this property only if you have a valid license key, otherwise do not 
+//set it so DocumentUltimate runs in trial mode. 
+DocumentUltimateConfiguration.Current.LicenseKey = &quot;QQJDJLJP34...&quot;; 
+ 
+//The default CachePath value is &quot;~/App_Data/DocumentCache&quot; 
+//Both virtual and physical paths are allowed. 
+DocumentUltimateWebConfiguration.Current.CachePath = &quot;~/App_Data/DocumentCache&quot;;</pre>
+<div class="preview">
+<pre class="csharp"><span class="cs__com">//Set&nbsp;this&nbsp;property&nbsp;only&nbsp;if&nbsp;you&nbsp;have&nbsp;a&nbsp;valid&nbsp;license&nbsp;key,&nbsp;otherwise&nbsp;do&nbsp;not&nbsp;</span>&nbsp;
+<span class="cs__com">//set&nbsp;it&nbsp;so&nbsp;DocumentUltimate&nbsp;runs&nbsp;in&nbsp;trial&nbsp;mode.&nbsp;</span>&nbsp;
+DocumentUltimateConfiguration.Current.LicenseKey&nbsp;=&nbsp;<span class="cs__string">&quot;QQJDJLJP34...&quot;</span>;&nbsp;&nbsp;
+&nbsp;&nbsp;
+<span class="cs__com">//The&nbsp;default&nbsp;CachePath&nbsp;value&nbsp;is&nbsp;&quot;~/App_Data/DocumentCache&quot;&nbsp;</span>&nbsp;
+<span class="cs__com">//Both&nbsp;virtual&nbsp;and&nbsp;physical&nbsp;paths&nbsp;are&nbsp;allowed.&nbsp;</span>&nbsp;
+DocumentUltimateWebConfiguration.Current.CachePath&nbsp;=&nbsp;<span class="cs__string">&quot;~/App_Data/DocumentCache&quot;</span>;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">Alternatively you can specify the configuration in &lt;appSettings&gt; tag of your Web.config.<br>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>XML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">xml</span>
+<pre class="hidden">&lt;appSettings&gt; 
+  &lt;add key=&quot;DocumentUltimate:LicenseKey&quot; value=&quot;QQJDJLJP34...&quot; /&gt; 
+  &lt;add key=&quot;DocumentUltimateWeb:CachePath&quot; value=&quot;~/App_Data/DocumentCache&quot; /&gt; 
+&lt;/appSettings&gt;</pre>
+<div class="preview">
+<pre class="xml"><span class="xml__tag_start">&lt;appSettings</span><span class="xml__tag_start">&gt;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;<span class="xml__tag_start">&lt;add</span>&nbsp;<span class="xml__attr_name">key</span>=<span class="xml__attr_value">&quot;DocumentUltimate:LicenseKey&quot;</span>&nbsp;<span class="xml__attr_name">value</span>=<span class="xml__attr_value">&quot;QQJDJLJP34...&quot;</span>&nbsp;<span class="xml__tag_start">/&gt;</span>&nbsp;&nbsp;
+&nbsp;&nbsp;<span class="xml__tag_start">&lt;add</span>&nbsp;<span class="xml__attr_name">key</span>=<span class="xml__attr_value">&quot;DocumentUltimateWeb:CachePath&quot;</span>&nbsp;<span class="xml__attr_name">value</span>=<span class="xml__attr_value">&quot;~/App_Data/DocumentCache&quot;</span>&nbsp;<span class="xml__tag_start">/&gt;</span>&nbsp;&nbsp;
+<span class="xml__tag_end">&lt;/appSettings&gt;</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">As you would notice, DocumentUltimate: prefix maps to DocumentUltimateConfiguration.Current and DocumentUltimateWeb: prefix maps to DocumentUltimateWebConfiguration.Current.</div>
+</div>
+</li><li>
+<p>Open one of your pages (eg. Default.aspx) and at the top of your page add add the necessary namespaces:</p>
+<div class="scriptcode">
+<div class="pluginEditHolder" pluginCommand="mceScriptCode">
+<div class="title"><span>HTML</span></div>
+<div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div>
+<span class="hidden">html</span>
+<pre class="hidden">&lt;%@ Register TagPrefix=&quot;GleamTech&quot; Namespace=&quot;GleamTech.DocumentUltimate.Web&quot; Assembly=&quot;GleamTech.DocumentUltimate&quot; %&gt;</pre>
+<div class="preview">
+<pre class="html"><span class="html__tag_start">&lt;%@&nbsp;Register</span>&nbsp;<span class="html__attr_name">TagPrefix</span>=<span class="html__attr_value">&quot;GleamTech&quot;</span>&nbsp;<span class="html__attr_name">Namespace</span>=<span class="html__attr_value">&quot;GleamTech.DocumentUltimate.Web&quot;</span>&nbsp;<span class="html__attr_name">Assembly</span>=<span class="html__attr_value">&quot;GleamTech.DocumentUltimate&quot;</span>&nbsp;<span class="html__tag_start">%&gt;</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">Alternatively you can add the namespaces globally in
+<strong>Web.config</strong> to avoid adding namespaces in your pages every time:</div>
+<div>
+<div>
+<div id="ID0EADAAABAAA_code_Div1" style="display:block">
+<pre><div class="scriptcode"><div class="pluginEditHolder" pluginCommand="mceScriptCode"><div class="title"><span>XML</span></div><div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div><span class="hidden">xml</span><pre class="hidden">&lt;system.web&gt; 
+  &lt;pages&gt; 
+    &lt;controls&gt; 
+      . 
+      . 
+      . 
+      &lt;add tagPrefix=&quot;GleamTech&quot; namespace=&quot;GleamTech.DocumentUltimate.Web&quot; assembly=&quot;GleamTech.DocumentUltimate&quot; /&gt; 
+    &lt;/controls&gt; 
+  &lt;/pages&gt; 
+&lt;/system.web&gt;</pre>
+<div class="preview">
+<pre class="xml"><span class="xml__tag_start">&lt;system</span>.web<span class="xml__tag_start">&gt;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;<span class="xml__tag_start">&lt;pages</span><span class="xml__tag_start">&gt;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_start">&lt;controls</span><span class="xml__tag_start">&gt;&nbsp;</span>&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_start">&lt;add</span>&nbsp;<span class="xml__attr_name">tagPrefix</span>=<span class="xml__attr_value">&quot;GleamTech&quot;</span>&nbsp;<span class="xml__attr_name">namespace</span>=<span class="xml__attr_value">&quot;GleamTech.DocumentUltimate.Web&quot;</span>&nbsp;<span class="xml__attr_name">assembly</span>=<span class="xml__attr_value">&quot;GleamTech.DocumentUltimate&quot;</span>&nbsp;<span class="xml__tag_start">/&gt;</span>&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="xml__tag_end">&lt;/controls&gt;</span>&nbsp;&nbsp;
+&nbsp;&nbsp;<span class="xml__tag_end">&lt;/pages&gt;</span>&nbsp;&nbsp;
+&lt;/system.web&gt;</pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode">Now in your page insert these lines:</div>
+</pre>
+</div>
+</div>
+</div>
+<div>
+<div id="ID0EABAAABAAA_code_Div1" style="display:block">
+<pre><div class="scriptcode"><div class="pluginEditHolder" pluginCommand="mceScriptCode"><div class="title"><span>HTML</span></div><div class="pluginLinkHolder"><span class="pluginEditHolderLink">Edit</span>|<span class="pluginRemoveHolderLink">Remove</span></div><span class="hidden">html</span><pre class="hidden">&lt;GleamTech:DocumentViewer runat=&quot;server&quot;  
+    Width=&quot;800&quot;  
+    Height=&quot;600&quot;  
+    Document=&quot;~/Documents/Document.docx&quot; /&gt;</pre>
+<div class="preview">
+<pre class="html"><span class="html__tag_start">&lt;GleamTech</span>:DocumentViewer&nbsp;<span class="html__attr_name">runat</span>=<span class="html__attr_value">&quot;server&quot;</span>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__attr_name">Width</span>=<span class="html__attr_value">&quot;800&quot;</span>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__attr_name">Height</span>=<span class="html__attr_value">&quot;600&quot;</span>&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="html__attr_name">Document</span>=<span class="html__attr_value">&quot;~/Documents/Document.docx&quot;</span>&nbsp;<span class="html__tag_start">/&gt;</span></pre>
+</div>
+</div>
+</div>
+<div class="endscriptcode"><br>This will render a DocumentViewer control in the page which loads and displays the source document ~/Documents/Document.docx. Upon first view, internally DocumentViewer will convert the source document to PDF (used for &quot;Download as Pdf&quot; and also for next conversion step) and then to XPZ (a special web-friendly format which DocumentViewer uses to actually render documents in the browser). So in this case the user will see &quot;please wait awhile...&quot; message in the viewer for a few seconds. These generated PDF and XPZ files will be cached and upon consecutive page views, the document will be served directly from the cache so the user will see the document instantly on second viewing. When you modify the source document, the cached files are invalidated so your original document and the corresponding cached files are always synced automatically. Note that it's also possible to pre-cache documents via DocumentCache.PreCacheDocument method (e.g. when your user uploads a document), see General Samples for more information.</div>
+</pre>
+</div>
+</div>
+</li></ol>
+</div>
+
+</div>
+
+
+    </div>
+</body>
+</html>

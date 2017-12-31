@@ -1,0 +1,27 @@
+{
+  "CacheSourceKey": "1o1qshx",
+  "CachePdfKey": "1o1qshx/1o1qshx-93ii7d.pdf",
+  "CacheXpzKey": "1o1qshx/1o1qshx-sxnber.xpz",
+  "CacheInfoKey": "1o1qshx/1o1qshx-sxnber.json",
+  "CacheCopyKey": null,
+  "Document": "~/App_Data/ExampleFiles/Default.docx",
+  "DocumentHandlerType": "GleamTech.DocumentUltimateExamples.WebForms.VB.DocumentViewer.CustomDocumentHandler, GleamTech.DocumentUltimateExamples.WebForms.VB, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
+  "DocumentFileName": "Default.docx",
+  "InputOptions": {
+    "$type": "GleamTech.DocumentUltimate.WordProcessingInputOptions, GleamTech.DocumentUltimate",
+    "FieldFileName": "Default.docx",
+    "Format": "Docx",
+    "Password": null
+  },
+  "PdfOutputOptions": {
+    "Watermarks": [],
+    "FastWebViewEnabled": false,
+    "Password": null,
+    "Format": "Pdf"
+  },
+  "XpzOutputOptions": {
+    "Password": "1o1qshx",
+    "HighQualityEnabled": false,
+    "Format": "Xpz"
+  }
+}

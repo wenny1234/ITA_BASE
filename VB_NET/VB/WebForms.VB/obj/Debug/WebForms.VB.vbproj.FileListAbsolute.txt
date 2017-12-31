@@ -1,0 +1,16 @@
+C:\Users\JiaLinWang\Desktop\wangjl\VB_NET\VB\WebForms.VB\bin\GleamTech.DocumentUltimateExamples.WebForms.VB.dll.config
+C:\Users\JiaLinWang\Desktop\wangjl\VB_NET\VB\WebForms.VB\bin\GleamTech.DocumentUltimateExamples.WebForms.VB.dll
+C:\Users\JiaLinWang\Desktop\wangjl\VB_NET\VB\WebForms.VB\bin\GleamTech.DocumentUltimateExamples.WebForms.VB.pdb
+C:\Users\JiaLinWang\Desktop\wangjl\VB_NET\VB\WebForms.VB\bin\GleamTech.DocumentUltimateExamples.WebForms.VB.xml
+C:\Users\JiaLinWang\Desktop\wangjl\VB_NET\VB\WebForms.VB\bin\GleamTech.Core.dll
+C:\Users\JiaLinWang\Desktop\wangjl\VB_NET\VB\WebForms.VB\bin\GleamTech.DocumentUltimate.dll
+C:\Users\JiaLinWang\Desktop\wangjl\VB_NET\VB\WebForms.VB\bin\GleamTech.ExamplesCore.dll
+C:\Users\JiaLinWang\Desktop\wangjl\VB_NET\VB\WebForms.VB\bin\GleamTech.Core.xml
+C:\Users\JiaLinWang\Desktop\wangjl\VB_NET\VB\WebForms.VB\bin\GleamTech.DocumentUltimate.xml
+C:\Users\JiaLinWang\Desktop\wangjl\VB_NET\VB\WebForms.VB\obj\Debug\WebForms.VB.vbprojResolveAssemblyReference.cache
+C:\Users\JiaLinWang\Desktop\wangjl\VB_NET\VB\WebForms.VB\obj\Debug\GleamTech.DocumentUltimateExamples.WebForms.VB.Resources.resources
+C:\Users\JiaLinWang\Desktop\wangjl\VB_NET\VB\WebForms.VB\obj\Debug\WebForms.VB.vbproj.GenerateResource.Cache
+C:\Users\JiaLinWang\Desktop\wangjl\VB_NET\VB\WebForms.VB\obj\Debug\WebForms.VB.vbproj.CoreCompileInputs.cache
+C:\Users\JiaLinWang\Desktop\wangjl\VB_NET\VB\WebForms.VB\obj\Debug\GleamTech.DocumentUltimateExamples.WebForms.VB.dll
+C:\Users\JiaLinWang\Desktop\wangjl\VB_NET\VB\WebForms.VB\obj\Debug\GleamTech.DocumentUltimateExamples.WebForms.VB.xml
+C:\Users\JiaLinWang\Desktop\wangjl\VB_NET\VB\WebForms.VB\obj\Debug\GleamTech.DocumentUltimateExamples.WebForms.VB.pdb

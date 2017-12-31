@@ -1,0 +1,25 @@
+{
+  "CacheSourceKey": "1ea9hb0",
+  "CachePdfKey": "1ea9hb0/1ea9hb0-1k3kk2s.pdf",
+  "CacheXpzKey": "1ea9hb0/1ea9hb0-xw8i19.xpz",
+  "CacheInfoKey": "1ea9hb0/1ea9hb0-xw8i19.json",
+  "CacheCopyKey": null,
+  "Document": "C:\\Users\\JiaLinWang\\Desktop\\wangjl\\VB_NET\\VB\\WebForms.VB\\App_Data\\ExampleFiles\\Default.pdf",
+  "DocumentHandlerType": null,
+  "DocumentFileName": "Default.pdf",
+  "InputOptions": {
+    "Format": "Pdf",
+    "Password": null
+  },
+  "PdfOutputOptions": {
+    "Watermarks": [],
+    "FastWebViewEnabled": false,
+    "Password": null,
+    "Format": "Pdf"
+  },
+  "XpzOutputOptions": {
+    "Password": "1ea9hb0",
+    "HighQualityEnabled": false,
+    "Format": "Xpz"
+  }
+}

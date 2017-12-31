@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!--author DAO自動生成ツール v1.05  version データモデル v0.11.52 機能定義書 v第2期 -->
+<mapper namespace="weld.util.sample.CXXDA14633Mapper" >
+  <update id="update" parameterType="weld.util.sample.CXXDA14633InDaoDTO" >
+    UPDATE SVMSTKR 
+    SET
+      RKKI_KNRN_JTKB = #{rkkiKnrnJtkb,jdbcType=CHAR,javaType=String}
+      , RKKI_END_YMD = #{rkkiEndYmd,jdbcType=DECIMAL,typeHandler=jp.co.tokyo_gas.cisfw.sql.handler.CfwDecimalStringTrimTypeHandler} 
+      , UPD_TSMP = CURRENT TIMESTAMP
+      , UPD_USR_ID = #{updUsrId,jdbcType=CHAR,javaType=String}
+      , UPD_KTN_KINO_ID = #{updKtnKinoId,jdbcType=CHAR,javaType=String}
+      , REC_UPD_JNJ_NO = (
+        CASE
+          WHEN REC_UPD_JNJ_NO = 32767
+          THEN 1
+          ELSE REC_UPD_JNJ_NO + 1
+          END
+      )
+    WHERE
+      MTST_NO = #{mtstNo,jdbcType=DECIMAL,typeHandler=jp.co.tokyo_gas.cisfw.sql.handler.CfwDecimalStringTrimTypeHandler} 
+      AND SVKY_NO = #{svkyNo,jdbcType=DECIMAL,typeHandler=jp.co.tokyo_gas.cisfw.sql.handler.CfwDecimalStringTrimTypeHandler} 
+      AND RKKI_KNRN_JTKB IN ('02', '03')
+    <if test="@jp.co.tokyo_gas.cisfw.sql.CfwSQLQueryNoManager@isHost()">
+    QUERYNO 14633
+    </if>
+  </update>
+</mapper>

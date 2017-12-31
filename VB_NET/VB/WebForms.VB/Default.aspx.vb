@@ -1,11 +1,11 @@
-﻿Imports GleamTech.DocumentUltimate
+Imports GleamTech.DocumentUltimate
 Imports GleamTech.ExamplesCore
 
 Public Class DefaultPage
     Inherits Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
+'wjltest 001
         exampleExplorer.VersionTitle = "v" + DocumentUltimateConfiguration.AssemblyInfo.FileVersion.ToString()
 
         exampleExplorer.Examples = New ExampleBase() {

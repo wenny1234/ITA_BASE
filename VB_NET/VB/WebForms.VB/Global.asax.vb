@@ -1,9 +1,9 @@
-﻿Imports System.IO
+Imports System.IO
 Imports GleamTech.DocumentUltimate
 
 Public Class Global_asax
     Inherits HttpApplication
-
+'update a date 00001
     Sub Application_Start(ByVal sender As Object, ByVal e As EventArgs)
         Dim licenseFile = Server.MapPath("~/App_Data/License.dat")
         If File.Exists(licenseFile) Then
